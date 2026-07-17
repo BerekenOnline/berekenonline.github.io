@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Rente Calculator</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
 
+<body>
+
+<header>
+<h1>Rente Calculator</h1>
+</header>
+
+<main>
+
+<input type="number" id="bedrag" placeholder="Bedrag (€)">
+<input type="number" id="rente" placeholder="Rente (%)">
+
+<button onclick="calc()">Bereken</button>
+
+<h2 id="antwoord"></h2>
+
+<script>
+
+function calc(){
+
+let bedrag=parseFloat(document.getElementById("bedrag").value);
+
+let rente=parseFloat(document.getElementById("rente").value);
+
+let resultaat=bedrag*(rente/100);
+
+document.getElementById("antwoord").innerHTML=
+
+"Rente: €"+resultaat.toFixed(2);
+
+}
+
+</script>
+
+</main>
+
+</body>
+</html>
