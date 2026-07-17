@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Temperatuur Omrekenen</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Temperatuur Omrekenen</h1>
+</header>
+
+<main>
+
+<input type="number" id="c" placeholder="Graden Celsius">
+
+<button onclick="bereken()">Omrekenen</button>
+
+<h2 id="antwoord"></h2>
+
+<script>
+
+function bereken(){
+
+let c=parseFloat(document.getElementById("c").value);
+
+let f=(c*9/5)+32;
+
+document.getElementById("antwoord").innerHTML=
+
+f.toFixed(1)+" °F";
+
+}
+
+</script>
+
+</main>
+
+</body>
+</html>

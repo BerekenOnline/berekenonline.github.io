@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Lengte Omrekenen</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Lengte Omrekenen</h1>
+</header>
+
+<main>
+
+<input type="number" id="meter" placeholder="Meters">
+
+<button onclick="omrekenen()">Omrekenen</button>
+
+<h2 id="uitkomst"></h2>
+
+<script>
+
+function omrekenen(){
+
+let m=parseFloat(document.getElementById("meter").value);
+
+document.getElementById("uitkomst").innerHTML=
+
+(m*100).toFixed(2)+" centimeter";
+
+}
+
+</script>
+
+</main>
+
+</body>
+</html>

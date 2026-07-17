@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTW Calculator - BerekenOnline</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>BTW Calculator</h1>
+</header>
+
+<main>
+
+<h2>Bereken eenvoudig de BTW</h2>
+
+<input type="number" id="bedrag" placeholder="Voer bedrag in">
+
+<select id="btw">
+<option value="21">21%</option>
+<option value="9">9%</option>
+</select>
+
+<button onclick="bereken()">Bereken</button>
+
+<h3 id="uitkomst"></h3>
+
+<script>
+function bereken(){
+
+let bedrag=parseFloat(document.getElementById("bedrag").value);
+let btw=parseFloat(document.getElementById("btw").value);
+
+let resultaat=bedrag*(btw/100);
+
+document.getElementById("uitkomst").innerHTML=
+"BTW: €"+resultaat.toFixed(2)+"<br>Totaal: €"+(bedrag+resultaat).toFixed(2);
+
+}
+</script>
+
+</main>
+
+</body>
+</html>

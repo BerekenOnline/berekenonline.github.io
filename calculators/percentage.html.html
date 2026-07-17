@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Percentage Calculator</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Percentage Calculator</h1>
+
+</header>
+
+<main>
+
+<input id="getal">
+
+<input id="percentage">
+
+<button onclick="calc()">Bereken</button>
+
+<h2 id="antwoord"></h2>
+
+<script>
+
+function calc(){
+
+let g=document.getElementById("getal").value;
+
+let p=document.getElementById("percentage").value;
+
+document.getElementById("antwoord").innerHTML=(g*p/100).toFixed(2);
+
+}
+
+</script>
+
+</main>
+
+</body>
+
+</html>
